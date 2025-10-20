@@ -57,7 +57,7 @@ export default function ExperienceScreen() {
 
       {/* Header */}
       <header className="px-6 pt-12 pb-6">
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">체험 인증하기</h2>
+        <h2 className="text-2xl font-bold text-gray-300 mb-2">체험 인증하기</h2>
         <p className="text-gray-600">이 순간을 기록해주세요</p>
       </header>
 

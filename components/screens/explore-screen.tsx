@@ -102,7 +102,7 @@ export default function ExploreScreen() {
             </p>
             <Button
               onClick={handlePhotoCapture}
-              className="w-full h-12 bg-gradient-to-r from-[rgb(52,168,130)] to-[rgb(135,206,235)] text-white font-semibold rounded-xl shimmer"
+              className="w-full h-12 bg-gradient-to-r from-[rgb(52,168,130)] to-[rgb(135,206,235)] text-gray-300 font-semibold rounded-xl shimmer"
             >
               소원 제안하기
             </Button>
@@ -115,7 +115,7 @@ export default function ExploreScreen() {
         <div className="min-h-screen flex flex-col items-center justify-center px-6">
           <ParticleEffect />
           <GlassCard className="w-full max-w-md p-6">
-            <h2 className="text-2xl font-bold text-gray-800 mb-2 text-center">소원 제안하기</h2>
+            <h2 className="text-2xl font-bold text-gray-300 mb-2 text-center">소원 제안하기</h2>
             <p className="text-gray-600 mb-6 text-center text-sm">이곳에서 이루어지길 바라는 일은?</p>
             <Textarea
               value={wish}
@@ -126,7 +126,7 @@ export default function ExploreScreen() {
             <Button
               onClick={handleWishSubmit}
               disabled={!wish.trim()}
-              className="w-full h-12 bg-gradient-to-r from-[rgb(52,168,130)] to-[rgb(135,206,235)] text-white font-semibold rounded-xl shimmer disabled:opacity-50"
+              className="w-full h-12 bg-gradient-to-r from-[rgb(52,168,130)] to-[rgb(135,206,235)] text-gray-300 font-semibold rounded-xl shimmer disabled:opacity-50"
             >
               <Sparkles className="w-4 h-4 mr-2" />
               소원을 전하기
