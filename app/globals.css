@@ -205,9 +205,9 @@
 }
 
 .shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-  background-size: 1000px 100%;
-  animation: shimmer 2s infinite;
+    background: linear-gradient(90deg, rgba(205, 205, 254, 0.9), rgba(185, 205, 255, 0.9), rgba(205, 215, 245, 0.9));
+    background-size: 1000px 100%;
+    animation: shimmer 4s infinite;
 }
 
 /* Gradient backgrounds */

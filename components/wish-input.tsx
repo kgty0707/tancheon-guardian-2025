@@ -46,7 +46,7 @@ export default function WishInput({ onSubmit }: WishInputProps) {
         <Button
           onClick={handleSubmit}
           disabled={!wish.trim()}
-          className="w-full h-14 bg-gradient-to-r from-[rgb(52,168,130)] to-[rgb(135,206,235)] text-gray-300 text-lg font-semibold rounded-2xl shimmer disabled:opacity-50"
+          className="w-full h-14 bg-gradient-to-r from-[rgb(52,168,130)] to-[rgb(135,206,235)] text-gray-800 text-lg font-semibold rounded-2xl shimmer disabled:opacity-50"
         >
           <Sparkles className="w-5 h-5 mr-2" />
           소원을 전하기

@@ -124,7 +124,7 @@ export default function CodexScreen() {
 
           {/* Spirit grid */}
           <div className="px-6 pb-8">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-3">
               {spirits.map((spirit) => (
                 <button
                   key={spirit.id}
@@ -132,9 +132,9 @@ export default function CodexScreen() {
                   className="text-left"
                 >
                   <GlassCard
-                    className={`p-4 hover:glow-emerald transition-all ${!spirit.unlocked ? "opacity-60" : ""}`}
+                    className={`p-3 hover:glow-emerald transition-all ${!spirit.unlocked ? "opacity-60" : ""}`}
                   >
-                    <div className="aspect-square rounded-xl overflow-hidden mb-3 relative">
+                    <div className="aspect-square rounded-xl overflow-hidden mb-2 relative">
                       <img
                         src={spirit.image || "/placeholder.svg"}
                         alt={spirit.name}
@@ -142,20 +142,20 @@ export default function CodexScreen() {
                       />
                       {!spirit.unlocked && (
                         <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                          <Lock className="w-8 h-8 text-white" />
+                          <Lock className="w-6 h-6 text-white" />
                         </div>
                       )}
                     </div>
-                    <h3 className="font-semibold text-gray-800 mb-1">{spirit.name}</h3>
-                    <p className="text-xs text-gray-600 mb-2">{spirit.location}</p>
+                    <h3 className="font-semibold text-gray-800 mb-1 text-sm">{spirit.name}</h3>
+                    <p className="text-xs text-gray-600 mb-2 truncate">{spirit.location}</p>
                     {spirit.unlocked && (
-                      <div className="flex items-center justify-between">
+                      <div className="space-y-1">
                         <div className="flex items-center gap-1 text-xs text-gray-600">
                           <Sparkles className="w-3 h-3" />
-                          <span>{spirit.wishes} 소원</span>
+                          <span>{spirit.wishes}</span>
                         </div>
                         <div
-                          className={`px-2 py-1 rounded-full text-xs font-bold ${
+                          className={`px-2 py-0.5 rounded-full text-xs font-bold text-center ${
                             spirit.energy === "S"
                               ? "bg-[rgb(212,175,55)]/20 text-[rgb(212,175,55)]"
                               : "bg-[rgb(52,168,130)]/20 text-[rgb(52,168,130)]"
