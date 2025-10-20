@@ -75,30 +75,30 @@
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
 
-  /* Nature-inspired color palette */
-  --color-primary: #2d5016; /* Deep forest green */
-  --color-primary-hover: #3d6b1f;
-  --color-secondary: #8b6f47; /* Earthy brown */
-  --color-accent: #f4a460; /* Warm amber */
-  --color-accent-light: #ffd89b;
+  /* Magical nature-inspired color palette */
+  --color-background: 245 242 238; /* Soft beige */
+  --color-foreground: 30 35 40; /* Deep charcoal */
 
-  --color-background: #faf8f5; /* Soft cream */
-  --color-surface: #ffffff;
-  --color-surface-secondary: #f0ede6;
+  --color-card: 255 255 255; /* Pure white for glass cards */
+  --color-card-foreground: 30 35 40;
 
-  --color-foreground: #1a1a1a;
-  --color-muted: #6b7280;
-  --color-muted-foreground: #9ca3af;
+  --color-primary: 52 168 130; /* Emerald green */
+  --color-primary-foreground: 255 255 255;
 
-  --color-border: #e5e1d8;
-  --color-input: #e5e1d8;
+  --color-secondary: 212 175 55; /* Soft gold */
+  --color-secondary-foreground: 30 35 40;
 
-  --color-success: #4ade80;
-  --color-warning: #fbbf24;
-  --color-error: #ef4444;
+  --color-accent: 135 206 235; /* Sky blue */
+  --color-accent-foreground: 30 35 40;
+
+  --color-muted: 235 230 225; /* Light beige */
+  --color-muted-foreground: 100 105 110;
+
+  --color-border: 220 215 210;
+  --color-input: 220 215 210;
+  --color-ring: 52 168 130;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -126,7 +126,7 @@
   --color-chart-5: var(--chart-5);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
+  --radius-lg: 1rem;
   --radius-xl: calc(var(--radius) + 4px);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
@@ -136,15 +136,139 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-
-  --radius: 1rem;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(30, 35, 40, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glow effects */
+.glow-emerald {
+  box-shadow: 0 0 20px rgba(52, 168, 130, 0.4), 0 0 40px rgba(52, 168, 130, 0.2);
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4), 0 0 40px rgba(212, 175, 55, 0.2);
+}
+
+.glow-sky {
+  box-shadow: 0 0 20px rgba(135, 206, 235, 0.4), 0 0 40px rgba(135, 206, 235, 0.2);
+}
+
+/* Particle animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.6;
+  }
+}
+
+.particle {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Gradient backgrounds */
+.gradient-magical {
+  background: linear-gradient(
+    135deg,
+    rgba(52, 168, 130, 0.1) 0%,
+    rgba(135, 206, 235, 0.1) 50%,
+    rgba(212, 175, 55, 0.1) 100%
+  );
+}
+
+.gradient-night {
+  background: linear-gradient(180deg, #1a1f35 0%, #2d3548 50%, #1a1f35 100%);
+}
+
+/* Pulse animation for wishes */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Modal animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+
+/* Subtle glow for collected spirits */
+.glow-emerald-subtle {
+  box-shadow: 0 0 10px rgba(52, 168, 130, 0.2), 0 0 20px rgba(52, 168, 130, 0.1);
 }
