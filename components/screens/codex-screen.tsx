@@ -12,14 +12,14 @@ export default function CodexScreen() {
   const spirits = [
     {
       id: 1,
-      name: "탄천의 정령",
-      location: "탄천",
-      category: "생태·과학",
+      name: "박물관의 정령",
+      location: "탄천시 박물관",
+      category: "인문·역사",
       wishes: 234,
       energy: "S",
       unlocked: true,
       image: "/nature-spirit-guardian-green.jpg",
-      story: "탄천을 따라 흐르는 생명의 기운을 지키는 정령입니다.",
+      story: "역사를 따라 흐르는 나라를 지키는 정령입니다.",
     },
     {
       id: 2,
