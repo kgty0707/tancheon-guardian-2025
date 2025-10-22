@@ -10,16 +10,10 @@ interface CategoryFilterProps {
 export default function CategoryFilter({ selected, onSelect }: CategoryFilterProps) {
   const categories = [
     "전체",
-    "인문정신",
-    "시각예술",
-    "공연예술",
-    "전통예술",
-    "문화유산",
-    "생활문화",
+    "인문·역사",
+    "공연·전시",
     "축제·행사",
-    "문화산업",
-    "여가·레저",
-    "생태·과학",
+    "문화·여가"
   ]
 
   return (
