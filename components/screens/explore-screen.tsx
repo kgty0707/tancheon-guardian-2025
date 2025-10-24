@@ -143,7 +143,7 @@ export default function ExploreScreen() {
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-[rgb(52,168,130)] to-[rgb(135,206,235)] flex items-center justify-center glow-emerald animate-pulse-slow">
               <Sparkles className="w-16 h-16 text-white animate-spin-slow" />
             </div>
-            <h2 className="text-3xl font-bold text-gray-800 mb-2">다 이루어질지니</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-2">꿈꾸면 이루어질지니</h2>
             <p className="text-gray-600">당신의 소원이 별이 되었습니다</p>
           </div>
         </div>

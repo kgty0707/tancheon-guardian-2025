@@ -40,7 +40,7 @@ export default function ExperienceScreen() {
           <div className="w-20 h-20 rounded-full bg-[rgb(52,168,130)] glow-emerald flex items-center justify-center mx-auto mb-6">
             <Check className="w-10 h-10 text-white" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">다 이루어질지니</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">꿈꾸면 이루어질지니</h2>
           <p className="text-gray-600 mb-8">당신의 소원이 전해졌습니다</p>
           <Button onClick={() => setStep("ar")} className="w-full bg-[rgb(52,168,130)] hover:bg-[rgb(52,168,130)]/90">
             새로운 탐험 시작

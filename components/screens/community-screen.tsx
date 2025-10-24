@@ -22,7 +22,7 @@ export default function CommunityScreen() {
       id: 2,
       user: "문화탐험가",
       avatar: "/diverse-user-avatar-set-2.png",
-      content: "성남아트센터에서 소원을 빌었어요. 다 이루어질지니! 🌟",
+      content: "성남아트센터에서 소원을 빌었어요. 꿈꾸면 이루어질지니! 🌟",
       image: "/art-center-building.jpg",
       spirit: "아트센터의 정령",
       tags: ["#공연예술", "#소원"],

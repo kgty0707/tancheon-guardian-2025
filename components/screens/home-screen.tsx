@@ -62,7 +62,7 @@ export default function HomeScreen({ onNavigate }: HomeScreenProps) {
 
       {/* Header */}
       <header className="px-6 pt-12 pb-6">
-        <h1 className="text-3xl font-bold text-gray-800 mb-2 text-balance">다 이루어질지니</h1>
+        <h1 className="text-3xl font-bold text-gray-800 mb-2 text-balance">꿈꾸면 이루어질지니</h1>
         <p className="text-lg text-gray-600">정령과의 약속</p>
       </header>
 
